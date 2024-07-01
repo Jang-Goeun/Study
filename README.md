@@ -26,3 +26,5 @@
 </html>
 </code>
 </pre>
+
+- 아이콘 사용 시: npm install @mui/icons-material
