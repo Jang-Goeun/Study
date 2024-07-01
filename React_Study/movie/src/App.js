@@ -7,12 +7,13 @@ import PopularPage from "./pages/PopularPage";
 import TopRatedPage from "./pages/TopRatedPage";
 import UpComing from "./pages/UpComing";
 import NotFoundPage from "./pages/NotFoundPage";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar />
+    <BrowserRouter>
+      <Navbar />
+      <div className="content">
         <Routes>
           <Route path="/" element={<MainPage />}></Route>
           <Route path="/nowplaying" element={<NowPlayingPage />}></Route>
@@ -22,9 +23,9 @@ function App() {
           {/* 상단에 위치하는 라우트들의 규칙을 모두 확인, 일치하는 라우트가 없는 경우 처리 */}
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+      </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
